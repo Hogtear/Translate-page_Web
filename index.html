@@ -1,32 +1,44 @@
 <!DOCTYPE html>
-
 <html lang="pt-br" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">  
+    <title>Tradutor</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/img/qrcode-scan.svg">
-
-    <title>QR-CODE</title>
-
-</head>
-<body>
-    <div class="wrapper">
-        <header>
-            <h1>Gerador de QR-Code</h1>
-            <p>Cole a URL ou digite para gerar o QR-Code</p>
-        </header>
-        <div class="form">
-            <input type="text" placeholder="Digite ou cole a URL" placeholder="URL">
-            <button>Gerar QR-Code</button>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="icon" href="assets/img/language.svg">
+  
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea spellcheck="false" class="from-text" placeholder="Inserir texto"></textarea>
+          <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Tradução do texto"></textarea>
         </div>
-      <div class="qr-code">
-        <img src="" alt="qr-code">
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select></select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
       </div>
+      <button>Traduzir</button>
     </div>
 
+    <script src="assets/js/countries.js"></script>
     <script src="assets/js/script.js"></script>
 
-</body>
+  </body>
 </html>
